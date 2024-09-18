@@ -67,7 +67,10 @@ onMounted(async () => {
         <li @click="tab = 'firts'" :class="tab === 'firts' ? 'bg-slate-100' : 'hover:bg-slate-50'"
             class="px-3 ease-out duration-200 py-1.5 cursor-pointer text-sm">Tareas
         </li>
-        <li @click="tab = 'second'" :class="tab === 'second' ? 'bg-slate-100' : 'hover:bg-slate-50'"
+        <li @click="tab = 'second'; formData = {
+            title: '',
+            description: ''
+        }" :class="tab === 'second' ? 'bg-slate-100' : 'hover:bg-slate-50'"
             class="px-3 ease-out duration-200 py-1.5 cursor-pointer text-sm">Crear
             Tarea</li>
     </ul>
